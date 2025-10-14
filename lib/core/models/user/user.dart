@@ -24,6 +24,7 @@ abstract class User with _$User {
     @Default(false) bool banned,
     String? banReason,
     DateTime? banExpires,
+    String? status,
   }) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);

@@ -1,3 +1,67 @@
+# flutter_better_auth Fork - Actualización y Personalización
+
+Un cliente Dart/Flutter para interactuar con la API de autenticación Better Auth mediante un fork personalizado que permite obtener cambios y agregar campos personalizados al modelo `User`.
+
+## Custom User Model
+
+Para agregar campos personalizados al modelo `User`, edita el archivo `lib/core/models/user/user.dart` y agrega los nuevos campos. Por ejemplo:
+
+```dart
+class User {
+// Otros campos existentes
+
+String? status;
+
+// Constructor, métodos, etc.
+}
+```
+
+## Generar Archivos Automáticamente
+
+Al agregar o modificar campos en el modelo, genera automáticamente los archivos necesarios ejecutando:
+
+```sh
+flutter pub run build_runner build --delete-conflicting-outputs --build-filter="lib/**/*.dart"
+```
+
+## Contributing
+
+Una vez configurados y validados los cambios.
+```sh
+git add .
+git commit -m "Custom field added to User model"
+git push origin main
+```
+
+## Obtener últimos cambios
+
+Para obtener los últimos cambios del fork y actualizar tu proyecto, sigue estos pasos:
+
+1. Comentar temporalmente el paquete en tu archivo `pubspec.yaml`:
+```yaml
+  flutter_better_auth:
+    git:
+      url: https://github.com/user/flutter_better_auth
+      ref: main  
+```
+
+2. Limpiar el proyecto y obtener las dependencias:
+```sh
+flutter clean
+flutter pub get
+```
+
+3. Resetear el repositorio para poder tomar nuevos cambios:
+```sh
+flutter pub cache repair
+```
+
+4. Descomentar el paquete en `pubspec.yaml` y actualizar:
+```sh
+flutter clean
+flutter pub get
+```
+
 # Dart/Flutter BetterAuth
 
 A Dart/Flutter client for interacting with the Better Auth authentication API, enabling seamless
