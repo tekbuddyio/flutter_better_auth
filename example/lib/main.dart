@@ -101,6 +101,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       name: "test",
                       email: "test@mail.com",
                       password: "123456788",
+                      dateBirth: "",
+                      genderId: "",
+                      phoneCountryCodeId: "",
+                      phoneNumber: "",
                     );
                     if (result.data != null) {
                       debugPrint(result.data.toString());

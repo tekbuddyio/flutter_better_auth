@@ -22,8 +22,8 @@ class _SignUpBetterAuth implements SignUpBetterAuth {
     required String email,
     required String password,
     required String dateBirth,
-    required int genderId,
-    required int phoneCountryCodeId,
+    required String genderId,
+    required String phoneCountryCodeId,
     required String phoneNumber,
     String? callbackURL,
   }) async {
@@ -70,8 +70,8 @@ class _SignUpBetterAuth implements SignUpBetterAuth {
     required String email,
     required String password,
     required String dateBirth,
-    required int genderId,
-    required int phoneCountryCodeId,
+    required String genderId,
+    required String phoneCountryCodeId,
     required String phoneNumber,
     String? callbackURL,
   }) {

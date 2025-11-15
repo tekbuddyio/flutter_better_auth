@@ -21,8 +21,8 @@ abstract class SignUpBetterAuth {
     @BodyExtra('email') required String email,
     @BodyExtra('password') required String password,
     @BodyExtra('dateBirth') required String dateBirth,
-    @BodyExtra('genderId') required int genderId,
-    @BodyExtra('phoneCountryCodeId') required int phoneCountryCodeId,
+    @BodyExtra('genderId') required String genderId,
+    @BodyExtra('phoneCountryCodeId') required String phoneCountryCodeId,
     @BodyExtra('phoneNumber') required String phoneNumber,
     @BodyExtra('callbackURL') String? callbackURL,
   });
