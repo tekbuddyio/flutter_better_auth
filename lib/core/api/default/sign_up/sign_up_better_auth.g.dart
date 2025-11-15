@@ -21,6 +21,10 @@ class _SignUpBetterAuth implements SignUpBetterAuth {
     required String name,
     required String email,
     required String password,
+    required String dateBirth,
+    required int genderId,
+    required int phoneCountryCodeId,
+    required String phoneNumber,
     String? callbackURL,
   }) async {
     final _extra = <String, dynamic>{};
@@ -31,6 +35,10 @@ class _SignUpBetterAuth implements SignUpBetterAuth {
       'name': name,
       'email': email,
       'password': password,
+      'dateBirth': dateBirth,
+      'genderId': genderId,
+      'phoneCountryCodeId': phoneCountryCodeId,
+      'phoneNumber': phoneNumber,
       'callbackURL': callbackURL,
     };
     _data.removeWhere((k, v) => v == null);
@@ -61,6 +69,10 @@ class _SignUpBetterAuth implements SignUpBetterAuth {
     required String name,
     required String email,
     required String password,
+    required String dateBirth,
+    required int genderId,
+    required int phoneCountryCodeId,
+    required String phoneNumber,
     String? callbackURL,
   }) {
     return BetterAuthCallAdapter<SignUpResponse>().adapt(
@@ -68,6 +80,10 @@ class _SignUpBetterAuth implements SignUpBetterAuth {
         name: name,
         email: email,
         password: password,
+        dateBirth: dateBirth,
+        genderId: genderId,
+        phoneCountryCodeId: phoneCountryCodeId,
+        phoneNumber: phoneNumber,
         callbackURL: callbackURL,
       ),
     );
