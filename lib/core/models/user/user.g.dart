@@ -34,6 +34,7 @@ _User _$UserFromJson(Map<String, dynamic> json) => _User(
           ? null
           : DateTime.parse(json['banExpires'] as String),
   status: json['status'] as String?,
+  completeProfile: json['completeProfile'] as bool?,
 );
 
 Map<String, dynamic> _$UserToJson(_User instance) => <String, dynamic>{
@@ -55,4 +56,5 @@ Map<String, dynamic> _$UserToJson(_User instance) => <String, dynamic>{
   'banReason': instance.banReason,
   'banExpires': instance.banExpires?.toIso8601String(),
   'status': instance.status,
+  'completeProfile': instance.completeProfile,
 };
